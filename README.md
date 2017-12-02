@@ -13,4 +13,4 @@ The application has a simple login button when first started. The login does not
 ![Menu](/menu.png?raw=true "Menu Page")
 
 
-All the functionalaties for application is located on one page, and from there you can add a deposit money.
+All the functionalaties for application is located on one page, and from there you can add a deposit money. You can also view the balance for the two different accounts. The last functionality is to transfer funds between the two accounts. 
