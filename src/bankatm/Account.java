@@ -69,9 +69,8 @@ public class Account {
 
     }
     
-    // Withdraws from the specified account (remember, 0 = savings, 1 = checking)
-    // so long as the amount is increments of $20 and there are sufficient funds
-    // in the account. If more than four withdrawals have been made, the fee is also deducted.
+    // Withdraws from the specified account (0 = savings, 1 = checking)
+    //If more than four withdrawals is made, the fee is also lowered.
     public String withdraw (int type, double amount) throws InsufficientFundsException {
         String msg = "";
         if (amount % 20 == 0) {

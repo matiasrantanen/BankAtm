@@ -16,7 +16,7 @@ public class ATMFrame extends JFrame {
         setLocationRelativeTo(null);        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        // Initialize JPanels
+        // Initializes all the JPanels
         JPanel superPanel = new JPanel();
         JPanel loginPanel = new JPanel();
         JPanel buttons = new JPanel();
@@ -32,7 +32,7 @@ public class ATMFrame extends JFrame {
         radios.setLayout(new FlowLayout());
         
         
-        // Instantiat components
+        // Button setup
         JButton loginButton = new JButton("Login");
         JButton withdrawButton = new JButton("Withdraw");
         JButton depositButton = new JButton("Deposit");
@@ -48,7 +48,7 @@ public class ATMFrame extends JFrame {
         JTextField input = new JTextField();
         input.setPreferredSize(new Dimension(200, 25));
         
-        // Add components to the relevant panels
+        // Add components to the panels
         buttons.add(withdrawButton, BorderLayout.WEST);
         buttons.add(depositButton, BorderLayout.EAST);
         buttonsRow2.add(transferButton);
@@ -61,7 +61,7 @@ public class ATMFrame extends JFrame {
         
         loginPanel.add(loginButton);
         
-        // Instantiate Account class for use with listeners
+        // Account class setup
         Account account = new Account(500, 0);
         
         // Login button setup
@@ -145,7 +145,7 @@ public class ATMFrame extends JFrame {
                             JOptionPane.INFORMATION_MESSAGE);
             }
         }); 
-        //Savings radiobutton setup
+        //Savings radio button setup
         savings.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 selectedAccount = 0;
@@ -164,7 +164,7 @@ public class ATMFrame extends JFrame {
         superPanel.add(radios, BorderLayout.SOUTH);
         
         getContentPane().add(loginPanel, BorderLayout.NORTH);
-        //add(field, BorderLayout.SOUTH);
+        add(field, BorderLayout.SOUTH);
         
         
     }
